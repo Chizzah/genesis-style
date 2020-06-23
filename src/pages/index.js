@@ -388,35 +388,35 @@ export const query = graphql`
     }
     portraitOne: file(relativePath: { eq: "genesis-style-portrait-1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 768, quality: 100, srcSetBreakpoints: [480, 960]) {
+        fluid(maxWidth: 768, srcSetBreakpoints: [480, 960]) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     portraitTwo: file(relativePath: { eq: "genesis-style-portrait-2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 768, quality: 100, srcSetBreakpoints: [480, 960]) {
+        fluid(maxWidth: 768, srcSetBreakpoints: [480, 960]) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     portraitThree: file(relativePath: { eq: "genesis-style-portrait-3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 768, quality: 100, srcSetBreakpoints: [480, 960]) {
+        fluid(maxWidth: 768, srcSetBreakpoints: [480, 960]) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     landscapeOne: file(relativePath: { eq: "genesis-style-landscape-1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 768, quality: 100, srcSetBreakpoints: [480, 960]) {
+        fluid(maxWidth: 768, srcSetBreakpoints: [480, 960]) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     landscapeTwo: file(relativePath: { eq: "genesis-style-landscape-2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 768, quality: 100, srcSetBreakpoints: [480, 960]) {
+        fluid(maxWidth: 768, srcSetBreakpoints: [480, 960]) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
