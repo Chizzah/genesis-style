@@ -228,7 +228,7 @@ const productPage = ({ data }) => {
                         </Button>
                       </Box>
                       <Box>
-                        <Button variant='outline'>{quantity}</Button>
+                        <Button color='gray.900' variant='outline'>{quantity}</Button>
                       </Box>
                       <Box>
                         <Button
