@@ -10,13 +10,6 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      collection: allShopifyCollection {
-        edges {
-          node {
-            handle
-          }
-        }
-      }
       policy: allShopifyShopPolicy {
         edges {
           node {
@@ -30,9 +23,6 @@ exports.createPages = async ({ graphql, actions }) => {
   const productTemplate = require.resolve(
     `./src/templates/ProductPage/index.js`
   )
-  const collectionTemplate = require.resolve(
-    `./src/templates/CollectionPage/index.js`
-  )
   const policyTemplate = require.resolve(`./src/templates/PolicyPage/index.js`)
 
   if (result.errors) {
@@ -44,17 +34,6 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `/product/${product.node.handle}/`,
       component: productTemplate,
-      context: {
-        id,
-      },
-    })
-  })
-
-  result.data.collection.edges.forEach((collection) => {
-    const id = collection.node.handle
-    createPage({
-      path: `/collection/${collection.node.handle}/`,
-      component: collectionTemplate,
       context: {
         id,
       },
