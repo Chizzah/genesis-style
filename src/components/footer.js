@@ -16,7 +16,6 @@ import {
 
 import Facebook from '../../resources/icons/facebook.svg'
 import Instagram from '../../resources/icons/instagram.svg'
-import Pinterest from '../../resources/icons/pinterest.svg'
 import Whatsapp from '../../resources/icons/whatsapp.svg'
 
 const FooterHeading = ({ children }) => (
@@ -31,16 +30,6 @@ const FooterList = ({ children }) => (
   <ListItem my={2} _hover={{ color: 'purple.500' }}>
     {children}
   </ListItem>
-)
-
-const FooterLink = ({ children }) => (
-  <ChakraLink
-    isExternal
-    rel='noopener noreferrer'
-    _hover={{ color: 'purple.500' }}
-  >
-    {children}
-  </ChakraLink>
 )
 
 const Footer = () => {
@@ -156,18 +145,30 @@ const Footer = () => {
               </Link>
             </Text>
             <Flex mt={8} justify='center' align='center'>
-              <FooterLink href='#'>
+              <ChakraLink
+                href='https://www.facebook.com/genesisstylefashion/'
+                isExternal
+                rel='noopener noreferrer'
+                _focus={{ outline: 'none' }}
+              >
                 <Image src={Facebook} mr={6} size='16px' />
-              </FooterLink>
-              <FooterLink href='#'>
+              </ChakraLink>
+              <ChakraLink
+                href='https://www.picuki.com/profile/genesis_style'
+                isExternal
+                rel='noopener noreferrer'
+                _focus={{ outline: 'none' }}
+              >
                 <Image src={Instagram} mr={6} size='16px' />
-              </FooterLink>
-              <FooterLink href='#'>
-                <Image src={Pinterest} mr={6} size='16px' />
-              </FooterLink>
-              <FooterLink href='#'>
+              </ChakraLink>
+              <ChakraLink
+                href='https://wa.me/0671287183'
+                isExternal
+                rel='noopener noreferrer'
+                _focus={{ outline: 'none' }}
+              >
                 <Image src={Whatsapp} size='16px' />
-              </FooterLink>
+              </ChakraLink>
             </Flex>
           </Flex>
         </Flex>
@@ -182,7 +183,7 @@ const Footer = () => {
         </Text>
         <Text my='1' fontSize='xs' textAlign='center'>
           JAMstack Website by{' '}
-          <FooterLink href='https://chaddwebdesign.co.za'>
+          <ChakraLink href='https://chaddwebdesign.co.za'>
             <Button
               size='xs'
               color='green.500'
@@ -194,7 +195,7 @@ const Footer = () => {
             >
               Chadd Web Design
             </Button>
-          </FooterLink>
+          </ChakraLink>
         </Text>
       </Box>
     </>
