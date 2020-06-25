@@ -1,156 +1,156 @@
-@import "~bulma"
+// @import "~bulma"
 
-body
-	font-family: Verdana, Geneva, Tahoma, sans-serif
-	background-color: white
+// body
+// 	font-family: Verdana, Geneva, Tahoma, sans-serif
+// 	background-color: white
 
-h1,
-h2
-	font-family: Georgia, 'Times New Roman', Times, serif
+// h1,
+// h2
+// 	font-family: Georgia, 'Times New Roman', Times, serif
 
-input:-webkit-autofill
-	transition: background-color 5000s ease-in-out 0s
+// input:-webkit-autofill
+// 	transition: background-color 5000s ease-in-out 0s
 
-.BG
-	width: 100%
-	height: 87vh
-	background-repeat: no-repeat
-	background-size: cover
-	background-position: 50% 70%
-	font-size: 1.5rem
-	font-weight: 300
+// .BG
+// 	width: 100%
+// 	height: 87vh
+// 	background-repeat: no-repeat
+// 	background-size: cover
+// 	background-position: 50% 70%
+// 	font-size: 1.5rem
+// 	font-weight: 300
 
-.BO
-	width: 100%
-	height: 100%
-	background-color: rgba(0, 0, 0, 0.3)
+// .BO
+// 	width: 100%
+// 	height: 100%
+// 	background-color: rgba(0, 0, 0, 0.3)
 
-.site
-	display: flex
-	min-height: 100vh
-	flex-direction: column
+// .site
+// 	display: flex
+// 	min-height: 100vh
+// 	flex-direction: column
 
-.site-content
-	flex: 1
+// .site-content
+// 	flex: 1
 
-.productBox
-	min-height: 460px
+// .productBox
+// 	min-height: 460px
 
-.img-shop
-	padding: 5px
+// .img-shop
+// 	padding: 5px
 
-.img-shop :hover
-	padding: 0px
+// .img-shop :hover
+// 	padding: 0px
 
-.shopIcon::after
-	display: inline-block
-	position: absolute
-	margin: 0
-	padding: .1rem .25rem
-	text-align: center
-	white-space: nowrap
-	line-height: 1
-	background: #ea3c3c
-	background-clip: padding-box
-	border-radius: 0
-	box-shadow: 0 0 0 1px #fff
-	color: #ea3c3c
-	content: attr(data-badge)
-	z-index: 99
-	border-radius: 999999px
+// .shopIcon::after
+// 	display: inline-block
+// 	position: absolute
+// 	margin: 0
+// 	padding: .1rem .25rem
+// 	text-align: center
+// 	white-space: nowrap
+// 	line-height: 1
+// 	background: #ea3c3c
+// 	background-clip: padding-box
+// 	border-radius: 0
+// 	box-shadow: 0 0 0 1px #fff
+// 	color: #ea3c3c
+// 	content: attr(data-badge)
+// 	z-index: 99
+// 	border-radius: 999999px
 
-.shopIcon::after
-	min-width: 0.75rem
-	min-height: .75rem
-	font-size: .25rem
-	bottom: auto
-	left: 25px
+// .shopIcon::after
+// 	min-width: 0.75rem
+// 	min-height: .75rem
+// 	font-size: .25rem
+// 	bottom: auto
+// 	left: 25px
 
-.img-hover-zoom--zoom-n-rotate .imgProduct
-	transition: transform 2s
-	transform: scale(0.7)
-	transition-timing-function: ease-in
+// .img-hover-zoom--zoom-n-rotate .imgProduct
+// 	transition: transform 2s
+// 	transform: scale(0.7)
+// 	transition-timing-function: ease-in
 
-/* The Transformation */
-.img-hover-zoom--zoom-n-rotate:hover .imgProduct
-	transform: scale(0.9)
+// /* The Transformation */
+// .img-hover-zoom--zoom-n-rotate:hover .imgProduct
+// 	transform: scale(0.9)
 
-.imgProduct
-	animation-name: zoomIn
-	animation-duration: 2s
+// .imgProduct
+// 	animation-name: zoomIn
+// 	animation-duration: 2s
 
-@keyframes zoomIn
-	from
-		opacity: 0.7
-		transform: scale3d(0.6, 0.6, 0.8)
+// @keyframes zoomIn
+// 	from
+// 		opacity: 0.7
+// 		transform: scale3d(0.6, 0.6, 0.8)
 
-	50%
-		opacity: 1
-		transform: scale3d(0.7, 0.7, 0)
+// 	50%
+// 		opacity: 1
+// 		transform: scale3d(0.7, 0.7, 0)
 
-.productBox
-	animation-duration: 1s
-	animation-name: bounceOut
+// .productBox
+// 	animation-duration: 1s
+// 	animation-name: bounceOut
 
-.productBox :hover
-	animation-duration: 2s
-	animation-timing-function: ease
-	animation-name: hoverProduct
-	animation-direction: alternate
+// .productBox :hover
+// 	animation-duration: 2s
+// 	animation-timing-function: ease
+// 	animation-name: hoverProduct
+// 	animation-direction: alternate
 
-@keyframes hoverProduct
-	from
-		opacity: 1
-	50%
-		opacity: 0.7
-	100%
-		opacity: 1
-
-
-@keyframes bounceOut
-	0%
-		opacity: 0
-		transform: translate3d(0, 10%, 0)
+// @keyframes hoverProduct
+// 	from
+// 		opacity: 1
+// 	50%
+// 		opacity: 0.7
+// 	100%
+// 		opacity: 1
 
 
-	100%
-		opacity: 1
-		transform: scale3d(1, 1, 1)
+// @keyframes bounceOut
+// 	0%
+// 		opacity: 0
+// 		transform: translate3d(0, 10%, 0)
 
-.fromleft
-	animation-name: FromLeft
-	animation-duration: 2.5s
 
-@keyframes FromLeft
-	from
-		opacity: 0.7
-		transform: translate3d(100%, 0, 0)
-	50%
-		opacity: 1
-		transform: translate3d(0, 0, 0)
+// 	100%
+// 		opacity: 1
+// 		transform: scale3d(1, 1, 1)
 
-.allpictures
-	animation-name: zoomIn
-	animation-duration: 2.5s
-	flex-direction: row
+// .fromleft
+// 	animation-name: FromLeft
+// 	animation-duration: 2.5s
 
-.Line_itemMobile
-	display: none
+// @keyframes FromLeft
+// 	from
+// 		opacity: 0.7
+// 		transform: translate3d(100%, 0, 0)
+// 	50%
+// 		opacity: 1
+// 		transform: translate3d(0, 0, 0)
 
-@media only screen and (max-width:770px)
-	.allpictures
-		flex-direction: column
-		width: 1
-		.box
-			padding: 0
-			box-shadow: none
+// .allpictures
+// 	animation-name: zoomIn
+// 	animation-duration: 2.5s
+// 	flex-direction: row
 
-		.productBox
-			padding: 30px
+// .Line_itemMobile
+// 	display: none
 
-		.hero-body
-			padding: 3rem 0.5rem
-		.Line_item
-			display: none
-		.Line_itemMobile
-			display: block
+// @media only screen and (max-width:770px)
+// 	.allpictures
+// 		flex-direction: column
+// 		width: 1
+// 		.box
+// 			padding: 0
+// 			box-shadow: none
+
+// 		.productBox
+// 			padding: 30px
+
+// 		.hero-body
+// 			padding: 3rem 0.5rem
+// 		.Line_item
+// 			display: none
+// 		.Line_itemMobile
+// 			display: block
