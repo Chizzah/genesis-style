@@ -33,7 +33,7 @@
     "gatsby-source-cloudinary": "^0.1.14",
     "gatsby-source-filesystem": "^2.3.10",
     "gatsby-source-graphql": "^2.5.3",
-    "gatsby-source-shopify": "^3.2.10",
+    "gatsby-source-shopify": "^3.2.14",
     "gatsby-transformer-sharp": "^2.5.4",
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",

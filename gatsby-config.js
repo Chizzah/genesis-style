@@ -9,6 +9,10 @@ module.exports = {
     author: `Chadd Poggenpoel <chaddwebdesign@gmail.com>`,
   },
   plugins: [
+    `gatsby-plugin-react-head`,
+    `gatsby-plugin-layout`,
+    `gatsby-plugin-chakra-ui`,
+    `gatsby-plugin-sass`,
     {
       resolve: 'gatsby-source-shopify',
       options: {
@@ -20,19 +24,21 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-apollo-shopify`,
+      options: {
+        shopName: process.env.GATSBY_SHOPIFY_SHOP_NAME,
+        accessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-react-head`,
-    `gatsby-plugin-layout`,
-    `gatsby-plugin-chakra-ui`,
-    `gatsby-plugin-sass`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-cloudinary`,
       options: {
@@ -42,15 +48,16 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-crisp-chat',
-      options: {
-        websiteId: process.env.GATSBY_CRISP_CHAT_WEBSITE_ID,
-      },
-    },
-    {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
         devMode: true,
+      },
+    },
+    `gatsby-plugin-netlify`,
+    {
+      resolve: 'gatsby-plugin-crisp-chat',
+      options: {
+        websiteId: process.env.GATSBY_CRISP_CHAT_WEBSITE_ID,
       },
     },
     {
