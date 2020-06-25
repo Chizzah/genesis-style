@@ -10,13 +10,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-apollo-shopify`,
-      options: {
-        shopName: process.env.GATSBY_SHOPIFY_SHOP_NAME,
-        accessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN,
-      },
-    },
-    {
       resolve: 'gatsby-source-shopify',
       options: {
         shopName: process.env.GATSBY_SHOPIFY_SHOP_NAME,
