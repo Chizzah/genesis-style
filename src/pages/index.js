@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
         title='Genesis Style - South African Designer Label'
         description='Genesis Style is a South African designer label for women, proudly manufactured in Cape Town.'
       />
-      <BackgroundImage
+      {/* <BackgroundImage
         className='BG'
         fluid={data.indexHero.childImageSharp.fluid}
         alt='Genesis Style'
@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
             </Button>
           </Link>
         </Stack>
-      </BackgroundImage>
+      </BackgroundImage> */}
 
       {/* Benefits Section */}
 
@@ -128,7 +128,7 @@ const IndexPage = ({ data }) => {
 
       {/* Featured Products */}
 
-      <Box as='section' w='100%' h='auto' pt={16} bg='purple.50'>
+      <Box as='section' w='100%' h='auto' pt={16}>
         <Flex direction='column' justify='center' align='center'>
           <SectionTitle>Featured Products</SectionTitle>
           <Spacer />
@@ -291,7 +291,7 @@ const IndexPage = ({ data }) => {
 
       {/* Social Proof */}
 
-      <Box as='section' w='100%' h='auto' py={16} bg='purple.50'>
+      <Box as='section' w='100%' h='auto' py={16}>
         <Flex direction='column' justify='center' align='center'>
           <Flex direction='column' justify='center' align='center'>
             <SectionTitle>What Our Customers Think</SectionTitle>
