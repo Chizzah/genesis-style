@@ -151,7 +151,7 @@ const Footer = () => {
                 rel='noopener noreferrer'
                 _focus={{ outline: 'none' }}
               >
-                <Image src={Facebook} mr={6} size='16px' />
+                <Image src={Facebook} mr={6} size='16px' alt='Facebook icon' />
               </ChakraLink>
               <ChakraLink
                 href='https://www.picuki.com/profile/genesis_style'
@@ -159,7 +159,7 @@ const Footer = () => {
                 rel='noopener noreferrer'
                 _focus={{ outline: 'none' }}
               >
-                <Image src={Instagram} mr={6} size='16px' />
+                <Image src={Instagram} mr={6} size='16px' alt='Instagram icon' />
               </ChakraLink>
               <ChakraLink
                 href='https://wa.me/0671287183'
@@ -167,7 +167,7 @@ const Footer = () => {
                 rel='noopener noreferrer'
                 _focus={{ outline: 'none' }}
               >
-                <Image src={Whatsapp} size='16px' />
+                <Image src={Whatsapp} size='16px' alt='Whatsapp Icon' />
               </ChakraLink>
             </Flex>
           </Flex>
