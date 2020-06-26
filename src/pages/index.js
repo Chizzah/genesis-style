@@ -20,6 +20,7 @@ const IndexPage = ({ data }) => {
       <BackgroundImage
         className='BG'
         fluid={data.indexHero.childImageSharp.fluid}
+        alt='Genesis Style'
         critical
       >
         <Stack
@@ -157,10 +158,10 @@ const IndexPage = ({ data }) => {
                     />
                   )}
                 </Link>
-                <Heading as='h3' size='sm'>
+                <Heading as='h3' size='xs'>
                   {title}
                 </Heading>
-                <Text fontSize='xs'>{firstVariant.price}</Text>
+                <Text fontSize='xs'>R{firstVariant.price}</Text>
               </Card>
             )
           )}
@@ -193,7 +194,7 @@ const IndexPage = ({ data }) => {
               mb={3}
               overflowY='hidden'
             >
-              <Img fluid={data.portraitTwo.childImageSharp.fluid} alt='' />
+              <Img fluid={data.portraitTwo.childImageSharp.fluid} alt='Genesis Style' />
             </Box>
             <Flex
               w={['90%', null, null, null]}
@@ -218,7 +219,7 @@ const IndexPage = ({ data }) => {
               mb={6}
               overflowY='hidden'
             >
-              <Img fluid={data.portraitOne.childImageSharp.fluid} alt='' />
+              <Img fluid={data.portraitOne.childImageSharp.fluid} alt='Genesis Style' />
             </Box>
           </Flex>
           <Box
@@ -230,7 +231,7 @@ const IndexPage = ({ data }) => {
           >
             <Img
               fluid={data.landscapeOne.childImageSharp.fluid}
-              alt=''
+              alt='Genesis Style'
               imgStyle={{
                 height: '480px',
               }}
@@ -264,7 +265,7 @@ const IndexPage = ({ data }) => {
               mb={6}
               overflowY='hidden'
             >
-              <Img fluid={data.portraitThree.childImageSharp.fluid} alt='' />
+              <Img fluid={data.portraitThree.childImageSharp.fluid} alt='Genesis Style' />
             </Box>
           </Flex>
           <Box
@@ -280,7 +281,7 @@ const IndexPage = ({ data }) => {
               imgStyle={{
                 height: '480px',
               }}
-              alt=''
+              alt='Genesis Style'
             />
           </Box>
         </Box>
@@ -314,6 +315,7 @@ const IndexPage = ({ data }) => {
                 <Img
                   imgStyle={{ borderRadius: '50px' }}
                   fixed={data.avatarOne.childImageSharp.fixed}
+                  alt='Vuyokazi Ntonzima testimonial'
                 />
               </Box>
               <Heading as='h3' size='sm' mt={6} mb={3}>
@@ -337,6 +339,7 @@ const IndexPage = ({ data }) => {
                 <Img
                   imgStyle={{ borderRadius: '50px' }}
                   fixed={data.avatarTwo.childImageSharp.fixed}
+                  alt='Keneilwe Molupe testimonial'
                 />
               </Box>
               <Heading as='h3' size='sm' mt={6} mb={3}>
@@ -359,6 +362,7 @@ const IndexPage = ({ data }) => {
                 <Img
                   imgStyle={{ borderRadius: '50px' }}
                   fixed={data.avatarThree.childImageSharp.fixed}
+                  alt='Audrey Alexander testimonial'
                 />
               </Box>
               <Heading as='h3' size='sm' mt={6} mb={3}>
@@ -382,7 +386,7 @@ export const query = graphql`
       childImageSharp {
         fluid(
           maxWidth: 1200
-          srcSetBreakpoints: [480, 960, 768]
+          srcSetBreakpoints: [480, 768, 910]
         ) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
@@ -390,35 +394,35 @@ export const query = graphql`
     }
     portraitOne: file(relativePath: { eq: "genesis-style-portrait-1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 768, srcSetBreakpoints: [480, 960]) {
+        fluid(maxWidth: 768, srcSetBreakpoints: [480]) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     portraitTwo: file(relativePath: { eq: "genesis-style-portrait-2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 768, srcSetBreakpoints: [480, 960]) {
+        fluid(maxWidth: 768, srcSetBreakpoints: [480]) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     portraitThree: file(relativePath: { eq: "genesis-style-portrait-3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 768, srcSetBreakpoints: [480, 960]) {
+        fluid(maxWidth: 768, srcSetBreakpoints: [480]) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     landscapeOne: file(relativePath: { eq: "genesis-style-landscape-1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 768, srcSetBreakpoints: [480, 960]) {
+        fluid(maxWidth: 768, srcSetBreakpoints: [480]) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     landscapeTwo: file(relativePath: { eq: "genesis-style-landscape-2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 768, srcSetBreakpoints: [480, 960]) {
+        fluid(maxWidth: 768, srcSetBreakpoints: [480]) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
