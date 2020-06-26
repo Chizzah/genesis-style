@@ -68,7 +68,7 @@ const IndexPage = ({ data }) => {
         </Stack>
       </BackgroundImage> */}
 
-      {/* Benefits Section
+      {/* Benefits Section */}
 
       <Box as='section' w='100%' h='auto' pt={16}>
         <Flex direction='column' justify='center' align='center'>
