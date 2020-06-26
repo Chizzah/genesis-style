@@ -31,6 +31,12 @@ module.exports = {
         accessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: 'gatsby-plugin-preconnect',
+      options: {
+        domains: ['https://favorshop-2.myshopify.com'],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
