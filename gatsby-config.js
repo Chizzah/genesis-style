@@ -9,6 +9,7 @@ module.exports = {
     author: `Chadd Poggenpoel <chaddwebdesign@gmail.com>`,
   },
   plugins: [
+    `gatsby-plugin-preact`,
     `gatsby-plugin-react-head`,
     `gatsby-plugin-layout`,
     `gatsby-plugin-chakra-ui`,

@@ -20,6 +20,7 @@ const IndexPage = ({ data }) => {
       <BackgroundImage
         className='BG'
         fluid={data.indexHero.childImageSharp.fluid}
+        critical
       >
         <Stack
           className='BO'
@@ -165,7 +166,9 @@ const IndexPage = ({ data }) => {
           )}
         </Flex>
       </Box>
+
       {/* Art Direction */}
+
       <Box as='section' w='100%' h='auto' pt={16}>
         <Flex direction='column' justify='center' align='center'>
           <SectionTitle>Find Comfort in Yourself</SectionTitle>
@@ -379,7 +382,6 @@ export const query = graphql`
       childImageSharp {
         fluid(
           maxWidth: 1200
-          quality: 100
           srcSetBreakpoints: [480, 960, 768]
         ) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -466,9 +468,8 @@ export const query = graphql`
             localFile {
               childImageSharp {
                 fluid(
-                  maxWidth: 768
-                  maxHeight: 900
-                  srcSetBreakpoints: [480, 960, 768]
+                  maxWidth: 240
+                  maxHeight: 280
                 ) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
