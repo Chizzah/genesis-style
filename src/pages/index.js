@@ -21,6 +21,8 @@ const IndexPage = ({ data }) => {
         className='BG'
         fluid={data.indexHero.childImageSharp.fluid}
         alt='Genesis Style'
+        loading='eager'
+        fadeIn={false}
         critical
       >
         <Stack
@@ -388,7 +390,7 @@ export const query = graphql`
           maxWidth: 1200
           srcSetBreakpoints: [480, 768, 910]
         ) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
