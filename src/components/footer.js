@@ -162,7 +162,7 @@ const Footer = () => {
                 <Image src={Instagram} mr={6} size='16px' alt='Instagram icon' />
               </ChakraLink>
               <ChakraLink
-                href='https://wa.me/0671287183'
+                href='https://wa.me/+26671287183'
                 isExternal
                 rel='noopener noreferrer'
                 _focus={{ outline: 'none' }}

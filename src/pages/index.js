@@ -66,7 +66,7 @@ const IndexPage = ({ data }) => {
             </Button>
           </Link>
         </Stack>
-      </BackgroundImage> */}
+      </BackgroundImage>
 
       {/* Benefits Section */}
 

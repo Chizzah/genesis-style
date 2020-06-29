@@ -2,24 +2,26 @@ import React from 'react'
 import { Link } from 'gatsby' /* eslint-disable */
 import Img from 'gatsby-image'
 
+import {Box, Text} from '@chakra-ui/core'
+
 const ProductBox = (props) => {
   const product = props.product
   return (
-    <div className='box productBox' key={product.node.title}>
+    <Box className='box productBox' key={product.node.title}>
       <Link to={`/product/${product.node.handle}`}>
         <Img
           fluid={product.node.images[0].localFile.childImageSharp.fluid}
           key={product.node.images[0].localFile.id}
           alt={product.node.title}
         />
-        <p className='has-text-weight-semibold has-text-black'>
+        <Text mt={3} fontSize={['xs', null, null, 'sm']} fontWeight='semibold'>
           {product.node.title}
-        </p>
-        <p className='has-text-weight-light has-text-grey'>
+        </Text>
+        <Text>
           R{product.node.variants[0].price}
-        </p>
+        </Text>
       </Link>
-    </div>
+    </Box>
   )
 }
 

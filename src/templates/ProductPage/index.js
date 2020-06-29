@@ -290,15 +290,6 @@ const productPage = ({ data }) => {
                     )}
                   </Flex>
                   <hr />
-                  <Box
-                    mt={6}
-                    key={`body`}
-                    id='content'
-                    className='content'
-                    dangerouslySetInnerHTML={{
-                      __html: product.descriptionHtml,
-                    }}
-                  />
                 </Box>
               </Box>
             </Flex>

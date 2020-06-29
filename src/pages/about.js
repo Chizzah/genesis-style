@@ -11,8 +11,8 @@ const AboutPage = () => {
         description='The label is focused on empowering women,
           using fashion and design to draw people to Jesus Christ.'
       />
-      <Box as='section' maxWidth='640px' minHeight='100vh' mx='auto'>
-        <Flex my={12} direction='column' justify='center' align='center'>
+      <Box as='section' maxWidth='640px' minHeight='100vh' mx='auto' py={[8, null, null, 16]}>
+        <Flex direction='column' justify='center' align='center'>
           <Heading
             as='h1'
             mb={6}
@@ -24,14 +24,15 @@ const AboutPage = () => {
           </Heading>
           <Divider w={16} borderColor='gray.900' />
         </Flex>
-        <Text m={3}>
+        <Box py={[4, null, null, 8]}>
+        <Text mx={6} mb={3}>
           Genesis Style is a South African Designer label for women, proudly
           manufactured in Cape Town. The label is focused on empowering women,
           using fashion and design to draw people to Jesus Christ and allowing
           women from different backgrounds to experience modesty in fashionable
           style.
         </Text>
-        <Text m={3}>
+        <Text mx={6} mb={3}>
           The way we choose to clothe ourselves acts as a window into our
           character and what we intend for others to see. More than that,
           clothing ourselves modestly glorifies God. No matter what we prefer or
@@ -40,13 +41,14 @@ const AboutPage = () => {
           exactly the message behind the Genesis Style brand. It is possible to
           have a ‘passion for fashion’ and modestly so.
         </Text>
-        <Text m={3}>
+        <Text mx={6} mb={3}>
           The brand is one that empowers women from all walks of life, with all
           kinds of stories to walk in the victory of God, fully clothed in His
           righteousness. This means considering all aspects of our lives from
           our passion to our fashion.
         </Text>
-        <Text m={3}>Modesty is a choice, we intentionally make daily.</Text>
+        <Text mx={6} mb={3}>Modesty is a choice, we intentionally make daily.</Text>
+        </Box>
       </Box>
     </>
   )
