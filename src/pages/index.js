@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
+import BackgroundImage from 'gatsby-background-image'
 
 import SEO from '../components/seo'
 import { Stack, Flex, Box, Heading, Text, Image, Button } from '@chakra-ui/core'
@@ -16,6 +17,56 @@ const IndexPage = ({ data }) => {
         title='Genesis Style - South African Designer Label'
         description='Genesis Style is a South African designer label for women, proudly manufactured in Cape Town.'
       />
+      <BackgroundImage
+        className='BG'
+        fluid={data.indexHero.childImageSharp.fluid}
+        alt='Genesis Style'
+        fadeIn={false}
+        loading='eager'
+      >
+        <Stack
+          className='BO'
+          spacing={12}
+          direction='column'
+          justify='center'
+          align='center'
+          color='gray.50'
+        >
+          <Box>
+            <Text
+              fontSize={['sm', null, null, 'lg']}
+              textAlign='center'
+              fontWeight='semibold'
+              textTransform='uppercase'
+            >
+              Comfort & Style
+            </Text>
+            <Heading
+              as='h1'
+              size='2xl'
+              px={[3, null, null, null]}
+              textAlign='center'
+              fontWeight='semibold'
+              textTransform='capitalize'
+            >
+              Face masks available
+            </Heading>
+          </Box>
+          <Link to='/catalog'>
+            <Button
+              variant='solid'
+              bg='purple.500'
+              size='lg'
+              textTransform='uppercase'
+              fontWeight='semibold'
+              _hover={{ bg: 'purple.300' }}
+              _focus={{ outline: 'none' }}
+            >
+              Buy Now
+            </Button>
+          </Link>
+        </Stack>
+      </BackgroundImage>
 
       {/* Benefits Section */}
 
@@ -341,6 +392,13 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
+    indexHero: file(name: { eq: "genesis-style-hero" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200, srcSetBreakpoints: [480, 768, 910]) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
     portraitOne: file(relativePath: { eq: "genesis-style-portrait-1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 768, srcSetBreakpoints: [480]) {
