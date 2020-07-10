@@ -7,10 +7,10 @@ import SEO from '../components/seo'
 const CataloguePage = ({ data }) => {
   return (
     <>
-    <SEO
-      title='Genesis Style Product Catalog'
-      description='Designer masks, dresses and more. Proudly manufactured in Cape Town.'
-    />
+      <SEO
+        title='Genesis Style Product Catalog'
+        description='Designer masks, dresses and more. Proudly manufactured in Cape Town.'
+      />
       <ProductList data={data} />
     </>
   )
@@ -41,7 +41,7 @@ export const query = graphql`
                 fluid(
                   maxWidth: 768
                   maxHeight: 900
-                  srcSetBreakpoints: [480, 640, 768]
+                  srcSetBreakpoints: [480, 640]
                 ) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }

@@ -20,7 +20,7 @@ module.exports = {
         shopName: process.env.GATSBY_SHOPIFY_SHOP_NAME,
         accessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN,
         verbose: true,
-        paginationSize: 50,
+        paginationSize: 250,
         includeCollections: ['shop', 'content'],
       },
     },

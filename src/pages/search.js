@@ -117,7 +117,7 @@ export const query = graphql`
                 fluid(
                   maxWidth: 768
                   maxHeight: 900
-                  srcSetBreakpoints: [480, 640, 768]
+                  srcSetBreakpoints: [480, 640]
                 ) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }

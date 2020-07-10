@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
         fluid={data.indexHero.childImageSharp.fluid}
         alt='Genesis Style'
         fadeIn={false}
-        critical
+        loading='eager'
       >
         <Stack
           className='BO'
@@ -195,7 +195,10 @@ const IndexPage = ({ data }) => {
               mb={3}
               overflowY='hidden'
             >
-              <Img fluid={data.portraitTwo.childImageSharp.fluid} alt='Genesis Style' />
+              <Img
+                fluid={data.portraitTwo.childImageSharp.fluid}
+                alt='Genesis Style'
+              />
             </Box>
             <Flex
               w={['90%', null, null, null]}
@@ -220,7 +223,10 @@ const IndexPage = ({ data }) => {
               mb={6}
               overflowY='hidden'
             >
-              <Img fluid={data.portraitOne.childImageSharp.fluid} alt='Genesis Style' />
+              <Img
+                fluid={data.portraitOne.childImageSharp.fluid}
+                alt='Genesis Style'
+              />
             </Box>
           </Flex>
           <Box
@@ -266,7 +272,10 @@ const IndexPage = ({ data }) => {
               mb={6}
               overflowY='hidden'
             >
-              <Img fluid={data.portraitThree.childImageSharp.fluid} alt='Genesis Style' />
+              <Img
+                fluid={data.portraitThree.childImageSharp.fluid}
+                alt='Genesis Style'
+              />
             </Box>
           </Flex>
           <Box
@@ -385,10 +394,7 @@ export const query = graphql`
   query {
     indexHero: file(name: { eq: "genesis-style-hero" }) {
       childImageSharp {
-        fluid(
-          maxWidth: 1200
-          srcSetBreakpoints: [480, 768, 910]
-        ) {
+        fluid(maxWidth: 1200, srcSetBreakpoints: [480, 768, 910]) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
@@ -472,10 +478,7 @@ export const query = graphql`
             id
             localFile {
               childImageSharp {
-                fluid(
-                  maxWidth: 240
-                  maxHeight: 280
-                ) {
+                fluid(maxWidth: 240, maxHeight: 280) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
