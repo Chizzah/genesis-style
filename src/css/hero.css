@@ -1,0 +1,12 @@
+.BG {
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.BO {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}

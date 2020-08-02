@@ -65,28 +65,12 @@ const Header = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <>
-      <Box
-        w='100%'
-        h='auto'
-        py={1}
-        bg='black'
-        color='gray.50'
-        textAlign='center'
-      >
-        <Text fontSize={['xs', null, null, 'sm']}>
-          Free delivery for orders over R1,000.
-        </Text>
-      </Box>
-      <Flex
-        as='nav'
-        maxW='1280px'
-        mx='auto'
-        align='center'
-        justify='space-between'
-        wrap='wrap'
-        padding='1rem'
-        color='gray.900'
+    <header className='bg-gray-100'>
+      <div className='w-full py-1 text-xs text-center text-gray-100 bg-black lg:text-sm'>
+        <p>Free delivery for orders over R1,000.</p>
+      </div>
+      <nav
+        className='flex items-center justify-between max-w-6xl p-3 mx-auto text-gray-900 bg-gray-100'
         {...props}
       >
         <Flex
@@ -187,7 +171,7 @@ const Header = (props) => {
             </Link>
           </Flex>
         </Box>
-      </Flex>
+      </nav>
       <Divider m='0' p='0' />
 
       <Modal preserveScrollBarGap isCentered isOpen={isOpen} onClose={onClose}>
@@ -213,7 +197,7 @@ const Header = (props) => {
           </FormControl>
         </ModalContent>
       </Modal>
-    </>
+    </header>
   )
 }
 

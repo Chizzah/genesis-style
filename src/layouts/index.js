@@ -192,7 +192,7 @@ class Layout extends Component {
           render={(data) => (
             <>
               <Header siteTitle={data.site.siteMetadata.title} />
-              {children}
+              <main className='bg-gray-100'>{children}</main>
               <Footer />
             </>
           )}
