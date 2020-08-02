@@ -1,20 +1,18 @@
 import React from 'react'
+import SEO from '../components/seo'
 import { graphql } from 'gatsby'
 import ProductList from '../components/productList'
 
-import SEO from '../components/seo'
-
-const CataloguePage = ({ data }) => {
+const IndexPage = ({ data }) => {
   return (
     <>
-      <SEO
-        title='Genesis Style Product Catalog'
-        description='Designer masks, dresses and more. Proudly manufactured in Cape Town.'
-      />
+      <SEO title='Home' />
       <ProductList data={data} />
     </>
   )
 }
+
+export default IndexPage
 
 export const query = graphql`
   query {
@@ -38,12 +36,8 @@ export const query = graphql`
             id
             localFile {
               childImageSharp {
-                fluid(
-                  maxWidth: 768
-                  maxHeight: 900
-                  srcSetBreakpoints: [480, 640]
-                ) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                fluid(maxWidth: 910) {
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
                 }
               }
             }
@@ -58,5 +52,3 @@ export const query = graphql`
     }
   }
 `
-
-export default CataloguePage

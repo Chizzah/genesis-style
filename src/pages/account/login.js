@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react'
+import SEO from '../../components/seo'
 import gql from 'graphql-tag'
 import { Mutation } from 'react-apollo'
 import StoreContext from '../../context/store'
 import ConnexionLayout from '../../components/account/ConnexionLayout'
-import { Link } from 'gatsby'
 
 const CUSTOMER_LOGIN = gql`
   mutation customerAccessTokenCreate($input: CustomerAccessTokenCreateInput!) {
@@ -50,7 +50,7 @@ const LoginForm = () => {
   return (
     <>
       {passwordForgot ? (
-        <section className='hero is-light is-fullheight-with-navbar'>
+        <section className='hero is-dark is-fullheight-with-navbar'>
           <div className='hero-body'>
             <div className='container'>
               <div className='columns is-centered'>
@@ -102,9 +102,13 @@ const LoginForm = () => {
                             <div className='field'>
                               <div
                                 className='control has-text-centered'
-                                onClick={(e) =>
+                                role='button'
+                                tabIndex='0'
+                                onClick={() =>
                                   setPasswordForgot(!passwordForgot)
                                 }
+                                onKeyDown={() => () =>
+                                  setPasswordForgot(!passwordForgot)}
                               >
                                 <p>Cancel</p>
                               </div>
@@ -120,7 +124,7 @@ const LoginForm = () => {
           </div>
         </section>
       ) : (
-        <section className='hero is-light is-fullheight-with-navbar'>
+        <section className='hero is-dark is-fullheight-with-navbar'>
           <div className='hero-body'>
             <div className='container'>
               <div className='columns is-centered'>
@@ -168,7 +172,10 @@ const LoginForm = () => {
                           <div className='field'>
                             <div
                               className='control has-text-centered'
-                              onClick={(e) =>
+                              role='button'
+                              tabIndex='0'
+                              onClick={() => setPasswordForgot(!passwordForgot)}
+                              onKeyDown={() =>
                                 setPasswordForgot(!passwordForgot)
                               }
                             >
@@ -205,9 +212,9 @@ const LoginForm = () => {
                           </div>
                           <div className='field'>
                             <div className='control has-text-centered'>
-                              <Link to='/account/register'>
+                              <a href='/../account/register'>
                                 <p className='has-text-white'>Create account</p>
-                              </Link>
+                              </a>
                             </div>
                           </div>
                         </>
@@ -227,6 +234,7 @@ const LoginForm = () => {
 const Login = () => {
   return (
     <>
+      <SEO title='Login' />
       <ConnexionLayout log={false}>
         <LoginForm />
       </ConnexionLayout>

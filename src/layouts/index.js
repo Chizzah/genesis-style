@@ -2,12 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import StoreContext, { defaultStoreContext } from '../context/store'
-import '../components/all.sass'
-import { navigate } from '@reach/router'
-
 import Header from '../components/header'
 import Footer from '../components/footer'
-
+import './layouts.sass'
+import { navigate } from '@reach/router'
 const isBrowser = typeof window !== 'undefined'
 
 class Layout extends Component {
@@ -192,13 +190,11 @@ class Layout extends Component {
             }
           `}
           render={(data) => (
-            <div className='site'>
-              <header>
-                <Header siteTitle={data.site.siteMetadata.title} />
-              </header>
-              <main className='site-content'>{children}</main>
+            <>
+              <Header siteTitle={data.site.siteMetadata.title} />
+              {children}
               <Footer />
-            </div>
+            </>
           )}
         />
       </StoreContext.Provider>
