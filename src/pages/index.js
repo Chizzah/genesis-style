@@ -5,8 +5,6 @@ import BackgroundImage from 'gatsby-background-image'
 
 import SEO from '../components/seo'
 import '../css/hero.css'
-import { Stack, Flex, Box, Heading, Text, Image, Button } from '@chakra-ui/core'
-import { SectionTitle, Tile, Card, Spacer } from '../utils/styles'
 import Clock from '../../resources/icons/clock.svg'
 import Hand from '../../resources/icons/hand-sanitizer.svg'
 import Truck from '../../resources/icons/truck.svg'
@@ -25,122 +23,65 @@ const IndexPage = ({ data }) => {
         fadeIn={false}
         loading='eager'
       >
-        <Stack
-          className='BO'
-          spacing={12}
-          direction='column'
-          justify='center'
-          align='center'
-          color='gray.50'
-        >
-          <Box>
-            <Text
-              fontSize={['sm', null, null, 'lg']}
-              textAlign='center'
-              fontWeight='semibold'
-              textTransform='uppercase'
-            >
-              Comfort & Style
-            </Text>
-            <Heading
-              as='h1'
-              size='2xl'
-              px={[3, null, null, null]}
-              textAlign='center'
-              fontWeight='semibold'
-              textTransform='capitalize'
-            >
-              Face masks available
-            </Heading>
-          </Box>
+        <div className='flex flex-col items-center justify-center w-full h-full text-gray-100 BO'>
+          <p className='font-semibold text-center uppercase lg:text-lg'>
+            Comfort & Style
+          </p>
+          <h1 className='py-3 text-4xl font-semibold text-center capitalize lg:text-6xl lg:py-6'>
+            Face masks available
+          </h1>
           <Link to='/catalog'>
-            <Button
-              variant='solid'
-              bg='purple.500'
-              size='lg'
-              textTransform='uppercase'
-              fontWeight='semibold'
-              _hover={{ bg: 'purple.300' }}
-              _focus={{ outline: 'none' }}
-            >
+            <button className='p-3 text-2xl font-semibold text-gray-100 bg-purple-600 rounded-lg hover:bg-purple-500 hover focus:outline-none'>
               Buy Now
-            </Button>
+            </button>
           </Link>
-        </Stack>
+        </div>
       </BackgroundImage>
 
       {/* Benefits Section */}
 
-      <Box as='section' w='100%' h='auto' pt={16}>
-        <Flex direction='column' justify='center' align='center'>
-          <SectionTitle>Why Shop Genesis Style</SectionTitle>
-          <Spacer />
-        </Flex>
-        <Flex
-          maxWidth='1280px'
-          mx='auto'
-          py={8}
-          direction={['column', null, null, 'row']}
-          justify='center'
-          align='center'
-        >
-          <Tile>
-            <Image
-              src={Clock}
-              alt='clock icon'
-              size={['32px', null, null, '64px']}
-            />
-            <Box textAlign='center'>
-              <Heading size='sm' textTransform='uppercase'>
+      <section className='w-full h-auto py-24'>
+        <h2 className='text-2xl font-semibold text-center uppercase'>
+          Why Shop Genesis Style
+        </h2>
+        <div className='flex flex-col items-center justify-around max-w-5xl py-12 mx-auto lg:flex-row'>
+          <div className='flex flex-col items-center justify-center w-64 h-64 p-6 text-center shadow-xl'>
+            <img className='w-12 h-12' src={Clock} alt='clock icon' />
+            <div className='mt-3'>
+              <h3 className='font-semibold text-gray-800 uppercase'>
                 Free Delivery
-              </Heading>
-              <Text fontSize='xs'>for orders over R1,000</Text>
-            </Box>
-          </Tile>
-          <Tile>
-            <Image
-              src={Hand}
-              alt='hand sanitizer icon'
-              size={['32px', null, null, '64px']}
-            />
-            <Box textAlign='center'>
-              <Heading size='sm' textTransform='uppercase'>
+              </h3>
+              <p className='text-xs'>for orders over R1,000</p>
+            </div>
+          </div>
+          <div className='flex flex-col items-center justify-center w-64 h-64 p-6 text-center shadow-xl'>
+            <img className='w-12 h-12' src={Hand} alt='hand sanitizer icon' />
+            <div className='mt-3'>
+              <h3 className='font-semibold text-gray-800 uppercase'>
                 Package Sanitized
-              </Heading>
-              <Text fontSize='xs'>at every exchange point</Text>
-            </Box>
-          </Tile>
-          <Tile>
-            <Image
-              src={Truck}
-              alt='truck icon'
-              size={['32px', null, null, '64px']}
-            />
-            <Box textAlign='center'>
-              <Heading size='sm' textTransform='uppercase'>
+              </h3>
+              <p className='text-xs'>at every exchange point</p>
+            </div>
+          </div>
+          <div className='flex flex-col items-center justify-center w-64 h-64 p-6 text-center shadow-xl'>
+            <img className='w-12 h-12' src={Truck} alt='truck icon' />
+            <div className='mt-3'>
+              <h3 className='font-semibold text-gray-800 uppercase'>
                 Reliable Shipping
-              </Heading>
-              <Text fontSize='xs'>to your door from R60</Text>
-            </Box>
-          </Tile>
-        </Flex>
-      </Box>
+              </h3>
+              <p className='text-xs'>to your door from R60</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Featured Products */}
 
-      <Box as='section' w='100%' h='auto' pt={16}>
-        <Flex direction='column' justify='center' align='center'>
-          <SectionTitle>Featured Products</SectionTitle>
-          <Spacer />
-        </Flex>
-        <Flex
-          maxWidth='1280px'
-          mx='auto'
-          py={16}
-          direction={['column', null, null, 'row']}
-          justify='center'
-          align='center'
-        >
+      <section className='w-full h-auto py-24'>
+        <h2 className='py-12 text-2xl font-semibold text-center uppercase'>
+          Featured Products
+        </h2>
+        <div className='flex flex-col items-center justify-around max-w-6xl py-12 mx-auto lg:flex-row'>
           {data.featured.edges.map(
             ({
               node: {
@@ -151,7 +92,7 @@ const IndexPage = ({ data }) => {
                 variants: [firstVariant],
               },
             }) => (
-              <Card key={id}>
+              <div className='w-64 h-64 mx-6 text-xs' key={id}>
                 <Link to={`/product/${handle}/`}>
                   {firstImage && firstImage.localFile && (
                     <Img
@@ -160,233 +101,67 @@ const IndexPage = ({ data }) => {
                     />
                   )}
                 </Link>
-                <Heading as='h3' size='xs'>
-                  {title}
-                </Heading>
-                <Text fontSize='xs'>R{firstVariant.price}</Text>
-              </Card>
+                <h3 className='mt-3 font-semibold'>{title}</h3>
+                <p className='mt-3'>R{firstVariant.price}</p>
+              </div>
             )
           )}
-        </Flex>
-      </Box>
-
-      {/* Art Direction */}
-
-      <Box as='section' w='100%' h='auto' pt={16}>
-        <Flex direction='column' justify='center' align='center'>
-          <SectionTitle>Find Comfort in Yourself</SectionTitle>
-          <Spacer
-            w={[12, null, null, 24]}
-            my={4}
-            border='2px'
-            borderColor='gray.600'
-          />
-        </Flex>
-        <Box maxW='960px' h='auto' mx='auto' py={16} overflowX='hidden'>
-          <Flex
-            direction={['column', null, null, 'row']}
-            justify='center'
-            align='center'
-          >
-            <Box
-              className='BO'
-              w={['90%', null, null, null]}
-              h='410px'
-              mx={['auto', null, null, null]}
-              mb={3}
-              overflowY='hidden'
-            >
-              <Img
-                fluid={data.portraitTwo.childImageSharp.fluid}
-                alt='Genesis Style'
-              />
-            </Box>
-            <Flex
-              w={['90%', null, null, null]}
-              h='420px'
-              mx={['auto', null, null, null]}
-              mb={6}
-              mx={[null, null, null, 3]}
-              direction='column'
-              justify='center'
-              align='center'
-              bg='orange.400'
-              color='gray.50'
-            >
-              <Heading textAlign='center'>
-                Genesis <br /> Magnolia LX <br /> Buy Now
-              </Heading>
-            </Flex>
-            <Box
-              w={['90%', null, null, null]}
-              h='420px'
-              mx={['auto', null, null, null]}
-              mb={6}
-              overflowY='hidden'
-            >
-              <Img
-                fluid={data.portraitOne.childImageSharp.fluid}
-                alt='Genesis Style'
-              />
-            </Box>
-          </Flex>
-          <Box
-            w={['90%', null, null, '100%']}
-            maxHeight={['240px', null, null, '480px']}
-            mx={['auto', null, null, null]}
-            mb={6}
-            overflowY='hidden'
-          >
-            <Img
-              fluid={data.landscapeOne.childImageSharp.fluid}
-              alt='Genesis Style'
-              imgStyle={{
-                height: '480px',
-              }}
-            />
-          </Box>
-          <Flex
-            direction={['column', null, null, 'row']}
-            justify='center'
-            align='center'
-          >
-            <Flex
-              w={['90%', null, null, null]}
-              h='430px'
-              mx={['auto', null, null, null]}
-              mb={6}
-              direction='column'
-              justify='center'
-              align='center'
-              bg='red.600'
-              color='gray.50'
-              overflowX='hidden'
-            >
-              <Heading textAlign='center'>
-                Red Hot <br /> Summer Sale <br /> Buy Now
-              </Heading>
-            </Flex>
-            <Box
-              w={['90%', null, null, null]}
-              h='430px'
-              mx={['auto', null, null, null]}
-              mb={6}
-              overflowY='hidden'
-            >
-              <Img
-                fluid={data.portraitThree.childImageSharp.fluid}
-                alt='Genesis Style'
-              />
-            </Box>
-          </Flex>
-          <Box
-            className='IO'
-            w={['90%', null, null, '100%']}
-            maxHeight={['240px', null, null, '480px']}
-            mx={['auto', null, null, null]}
-            mb={6}
-            overflowY='hidden'
-          >
-            <Img
-              fluid={data.landscapeTwo.childImageSharp.fluid}
-              imgStyle={{
-                height: '480px',
-              }}
-              alt='Genesis Style'
-            />
-          </Box>
-        </Box>
-      </Box>
+        </div>
+      </section>
 
       {/* Social Proof */}
 
-      <Box as='section' w='100%' h='auto' py={16}>
-        <Flex direction='column' justify='center' align='center'>
-          <Flex direction='column' justify='center' align='center'>
-            <SectionTitle>What Our Customers Think</SectionTitle>
-            <Spacer />
-          </Flex>
-          <Flex
-            direction={['column', null, null, 'row']}
-            justify='center'
-            align='center'
-            py={8}
-          >
-            <Flex
-              w={['70%', null, null, '30%']}
-              minH='240px'
-              my={[6, null, null, null]}
-              mr={[null, null, null, 12]}
-              p={6}
-              direction='column'
-              justify='start'
-              align='center'
-            >
-              <Box rounded='full' overflowX='hidden' overflowY='hidden'>
-                <Img
-                  imgStyle={{ borderRadius: '50px' }}
-                  fixed={data.avatarOne.childImageSharp.fixed}
-                  alt='Vuyokazi Ntonzima testimonial'
-                />
-              </Box>
-              <Heading as='h3' size='sm' mt={6} mb={3}>
-                Vuyokazi Ntonzima
-              </Heading>
-              <Text fontSize='xs'>
-                Love your dress styles, perfect fit for my mom...
-              </Text>
-            </Flex>
-            <Flex
-              w={['70%', null, null, '30%']}
-              minH='240px'
-              my={[6, null, null, null]}
-              mr={[null, null, null, 12]}
-              p={6}
-              direction='column'
-              justify='start'
-              align='center'
-            >
-              <Box rounded='full' overflowX='hidden' overflowY='hidden'>
-                <Img
-                  imgStyle={{ borderRadius: '50px' }}
-                  fixed={data.avatarTwo.childImageSharp.fixed}
-                  alt='Keneilwe Molupe testimonial'
-                />
-              </Box>
-              <Heading as='h3' size='sm' mt={6} mb={3}>
-                Keneilwe Molupe
-              </Heading>
-              <Text fontSize='xs'>
-                I recently bought two Genesis dresses and I love them very much.
-              </Text>
-            </Flex>
-            <Flex
-              w={['70%', null, null, '30%']}
-              minH='240px'
-              my={[6, null, null, null]}
-              p={6}
-              direction='column'
-              justify='start'
-              align='center'
-            >
-              <Box rounded='full' overflowX='hidden' overflowY='hidden'>
-                <Img
-                  imgStyle={{ borderRadius: '50px' }}
-                  fixed={data.avatarThree.childImageSharp.fixed}
-                  alt='Audrey Alexander testimonial'
-                />
-              </Box>
-              <Heading as='h3' size='sm' mt={6} mb={3}>
-                Audrey Alexander
-              </Heading>
-              <Text fontSize='xs'>
-                i love their clothing it caters for the petite and the fuller
-                figure.
-              </Text>
-            </Flex>
-          </Flex>
-        </Flex>
-      </Box>
+      <section className='w-full h-auto py-24'>
+        <h2 className='py-12 text-2xl font-semibold text-center uppercase'>
+          What Our Customers Think
+        </h2>
+        <div className='flex flex-col items-center justify-around max-w-6xl py-12 mx-auto lg:flex-row'>
+          <div className='flex flex-col items-center justify-start w-full p-6 my-6 lg:my-0 lg:mr-6'>
+            <div rounded='full' overflowX='hidden' overflowY='hidden'>
+              <Img
+                imgStyle={{ borderRadius: '50px' }}
+                fixed={data.avatarOne.childImageSharp.fixed}
+                alt='Vuyokazi Ntonzima testimonial'
+              />
+            </div>
+            <h3 className='mt-6 mb-3 text-sm font-semibold'>
+              Vuyokazi Ntonzima
+            </h3>
+            <p className='text-xs'>
+              Love your dress styles, perfect fit for my mom...
+            </p>
+          </div>
+          <div className='flex flex-col items-center justify-start w-full p-6 my-6 lg:my-0 lg:mr-6'>
+            <div rounded='full' overflowX='hidden' overflowY='hidden'>
+              <Img
+                imgStyle={{ borderRadius: '50px' }}
+                fixed={data.avatarTwo.childImageSharp.fixed}
+                alt='Keneilwe Molupe testimonial'
+              />
+            </div>
+            <h3 className='mt-6 mb-3 text-sm font-semibold'>Keneilwe Molupe</h3>
+            <p className='text-xs'>
+              I recently bought two Genesis dresses and I love them very much.
+            </p>
+          </div>
+          <div className='flex flex-col items-center justify-start w-full p-6 my-6 lg:my-0 lg:mr-6'>
+            <div rounded='full' overflowX='hidden' overflowY='hidden'>
+              <Img
+                imgStyle={{ borderRadius: '50px' }}
+                fixed={data.avatarThree.childImageSharp.fixed}
+                alt='Audrey Alexander testimonial'
+              />
+            </div>
+            <h3 className='mt-6 mb-3 text-sm font-semibold'>
+              Audrey Alexander
+            </h3>
+            <p className='text-xs'>
+              i love their clothing it caters for the petite and the fuller
+              figure.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

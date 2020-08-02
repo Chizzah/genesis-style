@@ -65,12 +65,12 @@ const Header = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <header className='bg-gray-100'>
+    <header className='bg-white'>
       <div className='w-full py-1 text-xs text-center text-gray-100 bg-black lg:text-sm'>
         <p>Free delivery for orders over R1,000.</p>
       </div>
       <nav
-        className='flex items-center justify-between max-w-6xl p-3 mx-auto text-gray-900 bg-gray-100'
+        className='flex items-center justify-between max-w-6xl p-3 mx-auto text-gray-900 bg-white'
         {...props}
       >
         <Flex
